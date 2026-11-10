@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    /* Output */
+    "target": "es2023",
+    "lib": ["es2023"],
+    "rootDir": "src",
+    "outDir": "dist",
+    "sourceMap": true,
+
+    /* ES modules (import / export) for Node */
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "types": ["node"],
+    "verbatimModuleSyntax": true,
+
+    /* Lets you write `import { x } from "./x.ts"` — rewritten to .js on build,
+       and runnable directly with `node src/main.ts` */
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "erasableSyntaxOnly": true,
+
+    /* Strict type checking */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    /* Misc */
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}
