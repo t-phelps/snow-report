@@ -27,4 +27,4 @@ jobs:
       - name: Run script
         run: npm start
         env:
-          GOOGLE_APP_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          GOOGLE_APP_PASSWORD: ${{ secrets.GOOGLE_APP_PASSWORD }}
