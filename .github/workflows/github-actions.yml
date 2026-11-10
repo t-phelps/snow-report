@@ -4,27 +4,24 @@ on:
   schedule:
     # Runs at 00:00 UTC every day
     - cron: "0 0 * * *"
-  # Highly recommended: Allows you to manually click "Run workflow" in GitHub to test it
+
   workflow_dispatch:
 
 jobs:
   cron-task:
     runs-on: ubuntu-latest
+
     steps:
-      # 1. Pulls your project files into the runner
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Sets up Node.js environment
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-base: "20" # Optional: Specify your project's Node version
+          node-version: "20"
 
-      # 3. Installs your project dependencies (required for npm scripts)
       - name: Install dependencies
         run: npm ci
 
-      # 4. Executes your script
       - name: Run script
         run: npm run dev
